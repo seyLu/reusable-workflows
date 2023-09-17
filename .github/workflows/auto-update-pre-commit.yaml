@@ -15,14 +15,13 @@ jobs:
   auto_update:
     name: Perform auto-update of pre-commit configuration
     runs-on: ubuntu-latest
-    if: ${{ github.repository }} != 'seyLu/.github'
 
     strategy:
       matrix:
         python-version: ["3.11"]
 
+    if: ${{ github.repository }} != 'seyLu/.github'
     steps:
-      - run: echo ${{ github.repository }}
       - name: Harden Runner
         uses: step-security/harden-runner@80b2fcb96ae248b7b80d284855acf93c338a6a0a # v2.5.0
         with:
