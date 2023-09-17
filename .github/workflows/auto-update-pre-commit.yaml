@@ -13,6 +13,7 @@ on:
 
 jobs:
   auto_update:
+    if: ${{ github.repository }} != 'seyLu/.github'
     name: Perform auto-update of pre-commit configuration
     runs-on: ubuntu-latest
 
@@ -41,7 +42,7 @@ jobs:
       - name: Install Pre-commit
         run: pip install pre-commit
 
-      - name: Update pre-commit
+      - name: Update pre-commit hooks
         run: pre-commit autoupdate
 
       - name: Create PR
