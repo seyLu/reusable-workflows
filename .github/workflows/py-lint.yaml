@@ -1,12 +1,12 @@
-name: Lint
-run-name: Linting ${{ github.repository }}
+name: Lint python
+run-name: Linting python files on ${{ github.repository }}
 
 on:
   workflow_call:
 
 jobs:
-  lint:
-    name: Perform lint
+  py-lint:
+    name: Perform lint python
     runs-on: ubuntu-latest
     if: ${{ github.repository != 'seyLu/.github' }}
 
