@@ -13,6 +13,7 @@ jobs:
   lint:
     name: Perform lint
     runs-on: ubuntu-latest
+    if: ${{ github.repository != 'seyLu/.github' }}
 
     strategy:
       matrix:
