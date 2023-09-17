@@ -15,7 +15,6 @@ jobs:
   auto_update:
     name: Perform auto-update of pre-commit configuration
     runs-on: ubuntu-latest
-    if: ${{ github.repository != 'seyLu/.github' }}
 
     strategy:
       matrix:
@@ -53,4 +52,3 @@ jobs:
           author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
           signoff: false
           delete-branch: true
-
