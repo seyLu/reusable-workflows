@@ -22,6 +22,7 @@ jobs:
         python-version: ["3.11"]
 
     steps:
+      - run: echo ${{ github.repository }}
       - name: Harden Runner
         uses: step-security/harden-runner@80b2fcb96ae248b7b80d284855acf93c338a6a0a # v2.5.0
         with:
